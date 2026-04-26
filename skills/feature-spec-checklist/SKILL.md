@@ -50,15 +50,26 @@ Name: `specs/2026-04-26-<feature-name>/` using today's date.
 - Example structure:
 
 ```markdown
-## Group 1: Data
 
-- [ ] Create migration file
-- [ ] Add seed entry
+## Group 1: Page Component
 
-## Group 2: Components
+- [ ] Create `src/pages/AboutUs.tsx`:
+   - Wraps content in `<Layout>`
+   - Four sections rendered in order: Mission, History, Staff, Contact & Hours
+   - All copy written fully in-world (see requirements for tone guidance)
+   - Staff bios should reference Dr. Evelyn Watts and Dr. Marcus Chen (names already in seed data)
 
-- [ ] Build form component
-- [ ] Add validation logic
+---
+
+## Group 2: Route
+
+- [ ] Create `src/routes/about.tsx`:
+   - `GET /` renders `<AboutUs />`
+   - No database argument needed — export `aboutRouter()` with no parameters
+
+- [ ] Register in `src/app.tsx`:
+   - Import `aboutRouter` and add `app.route("/about", aboutRouter())`
+
 ```
 
 #### `validation.md`
