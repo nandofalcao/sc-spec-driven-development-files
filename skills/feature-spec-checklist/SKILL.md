@@ -1,6 +1,6 @@
 ---
 name: feature-spec-checklist
-description: Kicks off a new feature by finding the next incomplete phase in specs/roadmap.md, creating a git branch, interviewing the user about scope/decisions/context, and writing a dated spec directory with requirements.md, plan.md (checklist format for agent progress tracking), and validation.md.
+description: Kicks off a new feature by finding the next incomplete phase in specs/roadmap.md, creating a git branch, interviewing the user about scope/decisions/context, and writing a dated spec d[...]
 ---
 
 # Feature Spec (Checklist)
@@ -51,24 +51,23 @@ Name: `specs/2026-04-26-<feature-name>/` using today's date.
 
 ```markdown
 
-## Group 1: Page Component
+## Group 1: <Component or Module>
 
-- [ ] Create `src/pages/AboutUs.tsx`:
-   - Wraps content in `<Layout>`
-   - Four sections rendered in order: Mission, History, Staff, Contact & Hours
-   - All copy written fully in-world (see requirements for tone guidance)
-   - Staff bios should reference Dr. Evelyn Watts and Dr. Marcus Chen (names already in seed data)
+- [ ] Create `src/<path>/<FeatureName>.tsx`:
+   - Describe the layout or structure it should have
+   - List the sections or sub-components it renders
+   - Note any data dependencies or props it receives
 
 ---
 
-## Group 2: Route
+## Group 2: <Route or Integration>
 
-- [ ] Create `src/routes/about.tsx`:
-   - `GET /` renders `<AboutUs />`
-   - No database argument needed — export `aboutRouter()` with no parameters
+- [ ] Create `src/routes/<feature>.tsx`:
+   - Define the HTTP method and path (e.g. `GET /feature`)
+   - Describe any parameters or return shape
 
-- [ ] Register in `src/app.tsx`:
-   - Import `aboutRouter` and add `app.route("/about", aboutRouter())`
+- [ ] Register in the app entry point:
+   - Import the router and mount it at the appropriate path
 
 ```
 
